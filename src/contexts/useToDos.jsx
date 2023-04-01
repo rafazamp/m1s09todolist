@@ -7,7 +7,6 @@ export const useToDos = () => {
   if (context) {
     return context;
   } else {
-    alert("useToDos não está dentro do ToDoProvider");
-    return;
+    throw new Error("useToDos não está dentro do ToDoProvider");
   }
 };
