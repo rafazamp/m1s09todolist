@@ -3,16 +3,15 @@ import { Formulario } from "../components/Formulario";
 import { ToDoProvider } from "../contexts/ToDoProvider";
 
 export const Home = () => {
-  
 
   return (
     <ToDoProvider>
       <div className="row">
-        <Formulario onSubmit={addToDo} />
+        <Formulario />
       </div>
       <div className="row">
-        <TodoList name="A fazer" list={pendingToDos} onClick={markTodo} />
-        <TodoList name="Finalizados" list={completedToDos} onClick={markTodo} />
+        <TodoList name="A fazer" />
+        <TodoList name="Finalizados"  />
       </div>
     </ToDoProvider>
   );
