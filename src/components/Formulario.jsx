@@ -1,6 +1,8 @@
 import { useRef } from "react";
+import { useToDos } from "../contexts/useToDos";
 
 export const Formulario = () => {
+  const { addToDo } = useToDos();
   const textElementRef = useRef();
 
   const handleSubmit = (event) => {
@@ -12,7 +14,7 @@ export const Formulario = () => {
   return (
     <div className="mb-5 p-4 bg-secondary-subtle bg-gradient rounded">
       <h5>Adicionar tarefa</h5>
-      <form className="input-group mb-3" onSubmit={handleSubmit}>
+      <form className="input-group mb-3" onSubmit={addToDo}>
         <span className="input-group-text" id="campo-adicionar-tarefa">
           Texto da tarefa:
         </span>
